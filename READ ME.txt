@@ -34,5 +34,6 @@ EL PRESENTE PROYECTO EXPONE LOS SIGUIENTES SERVICIOS
 -localhost:8081/api/cart/payment/process
  PROCESA EL PAGO DE UN CARRITO U ORDEN
  
+
 EJEMPLO DE CONSUMOS DE API VER ARCHIVO JSON
  /pruebaTecnica/practica.postman_collection 
