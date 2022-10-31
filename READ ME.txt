@@ -34,5 +34,15 @@ EL PRESENTE PROYECTO EXPONE LOS SIGUIENTES SERVICIOS
 -localhost:8081/api/cart/payment/process
  PROCESA EL PAGO DE UN CARRITO U ORDEN
  
+ /pruebaTecnica/practica.postman_collection
 EJEMPLO DE CONSUMOS DE API VER ARCHIVO JSON
- /pruebaTecnica/practica.postman_collection 
+
+https://github.com/mcerna2022/pruebaTecnica
+REPOSTIRORIO GIT
+
+CREDENTIALS:
+mcerna2022/Therion2022#
+
+
+
+  
