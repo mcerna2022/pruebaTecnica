@@ -1,0 +1,38 @@
+****************************************************
+PRUEBA-TECNICA FAKE-STORE-API
+****************************************************
+COMPILADO CON JDK 1.8
+****************************************************
+EL PRESENTE PROYECTO EXPONE LOS SIGUIENTES SERVICIOS
+
+-/oauth/token 
+ GENERA EL TOKEN DE AUTENTICACION, LAS CREDENCIALES PARA GENERAR TOKEN ESTAN CONENIDAS EN /config/general.properties 
+ credential.oauth.user
+ credential.oauth.pass
+ client.id
+ secret.client
+ (PARA EL CONSUMO DEL API DEBEN DE COMPARTIRSE)
+
+-/api/cart/client/create
+ CREA UN CLIENTE INTERACTUANDO CON EL API : https://fakestoreapi.com
+
+-/api/cart/product/all
+ MUESTRA TODOS LOS PRODUCTOS INTERACTUANDO CON EL API : https://fakestoreapi.com
+
+-/api/cart/add
+ AGRAGA UN PRODUCTO AL CARRITO U ORDEN  INTERACTUANDO CON EL API : https://fakestoreapi.com
+
+-/api/cart/update  I
+ ACTUALIZA UN PRODUCTO EN EL CARRITO U ORDEN INTERACTUANDO CON EL API : https://fakestoreapi.com
+
+-/api/cart/delete?idCart=##
+ ELIMINA UN PRODUCTO EN EL CARRITO U ORDEN INTERACTUANDO CON EL API : https://fakestoreapi.com
+
+-localhost:8081/api/cart/payment/carts
+ MUESTRA TODOS LOS CARRITOSCON DE UN USUARIO CON EL DETALLE DE PRODUCTOS, PRECIOS Y TOTAL A PAGAR INTERACTUANDO CON EL API : https://fakestoreapi.com
+
+-localhost:8081/api/cart/payment/process
+ PROCESA EL PAGO DE UN CARRITO U ORDEN
+ 
+EJEMPLO DE CONSUMOS DE API VER ARCHIVO JSON
+ /pruebaTecnica/practica.postman_collection 
