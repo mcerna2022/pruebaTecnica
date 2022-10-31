@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "19b51ef5-67cd-44cc-a0b9-d4fcd11f1acb",
+		"name": "practica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/oauth/token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "demoUser1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "cliente",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "password",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/oauth/token"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/cart/client/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "32addf43-f14f-41a0-8ada-ad0e9beeef93"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                    \"email\":\"mauricio@gmail.com\",\r\n                    \"username\":\"mauricio\",\r\n                    \"password\":\"$123456\",\r\n                    \"name\":{\r\n                        \"firstname\":\"Mauricio Antonio\",\r\n                        \"lastname\":\"Orellana Cerna\"\r\n                    },\r\n                    \"address\":{\r\n                        \"city\":\"San Salvador\",\r\n                        \"street\":\"avenida k, pol. 43\",\r\n                        \"number\":3,\r\n                        \"zipcode\":\"12926-3874\",\r\n                        \"geolocation\":{\r\n                            \"lat\":\"-37.3159\",\r\n                            \"long\":\"81.1496\"\r\n                        }\r\n                    },\r\n                    \"phone\":\"78544036\"\r\n                }"
+				},
+				"url": "localhost:8081/api/cart/client/create"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/cart/product/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "32addf43-f14f-41a0-8ada-ad0e9beeef93"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8081/api/cart/product/all"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/cart/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "32addf43-f14f-41a0-8ada-ad0e9beeef93"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                    \"userId\":5,\r\n                    \"date\":\"2020-02-03\",\r\n                    \"products\":[{\"productId\":5,\"quantity\":1},{\"productId\":1,\"quantity\":5}]\r\n                }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/cart/add"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/cart/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "32addf43-f14f-41a0-8ada-ad0e9beeef93"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":21,\r\n \"userId\":5,\r\n \"date\":\"2020-02-03\",\r\n \"products\":[{\"productId\":5,\"quantity\":1},{\"productId\":1,\"quantity\":5}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/cart/update"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/cart/delete?idCart=1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "32addf43-f14f-41a0-8ada-ad0e9beeef93"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/cart/delete?idCart=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"cart",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "idCart",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/cart/payment/carts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "36aed069-9ad8-476f-8a3b-f19f77efaff8"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/cart/payment/carts"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/cart/payment/process",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "36aed069-9ad8-476f-8a3b-f19f77efaff8"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCarts\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8081/api/cart/payment/process"
+			},
+			"response": []
+		}
+	]
+}
