@@ -9,7 +9,7 @@ import com.prueba.tecnica.clients.FakeStoreApiClient;
 import com.prueba.tecnica.dto.carts.request.AddCartRequest;
 import com.prueba.tecnica.dto.carts.request.UpdateCartRequest;
 import com.prueba.tecnica.dto.carts.response.AddCartObjectResponse;
-import com.prueba.tecnica.dto.carts.response.AddCartsResponse;
+
 import com.prueba.tecnica.dto.resultado.Resultado;
 import com.prueba.tecnica.exception.carts.CartsException;
 import lombok.extern.slf4j.Slf4j;
